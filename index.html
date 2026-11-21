@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background:URL("fon.jfif");
+            color: #f74a4a;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #9f3ff8a6;
+            color: rgb(255, 255, 255);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #e5b567;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 70px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e5b567;
+        }
+
+        .hero {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+            color: rgb(255, 234, 234);
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.8),
+                    rgba(0, 0, 0, 0.2)
+                ),
+                url("vrt.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(36px, 5vw, 64px);
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #e0e0e0;
+            margin-bottom: 35px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 16px 35px;
+            background: #e5b567;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .services {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #777;
+            margin-bottom: 45px;
+            line-height: 1.6;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            background: rgb(34, 10, 90);
+            padding: 35px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgb(100, 15, 134);
+            transition: 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-bottom-color: #e5b567;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-number {
+            font-size: 38px;
+            font-weight: bold;
+            color: #e5b567;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #38106d;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        footer img {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        footer img:hover {
+            transform: scale(1.2) translateY(-5px);
+            filter: drop-shadow(0 0 50px #25D366);
+        }
+
+        @media (max-width: 1000px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 20px 5%;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 500px;
+                padding: 60px 6%;
+                background-position: center;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .services {
+                padding: 60px 6%;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="king.jfif" style="width: 100px; height: 100px; vertical-align: middle; margin-right: 1px;">
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>World Football Info</h1>
+
+            <p>
+                Узнавай сведенья о мировой игре Football. Здесь есть все что ты искал о футболе. Новости, трансферы, результаты матчей и многое другое.
+            </p>
+
+            <a href="https://wa.me/+996773132293s" class="hero-btn">
+                Узнать больше →
+            </a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Сведенья о футболе</h2>
+
+        <p class="section-description">
+            Все свежие новости в одном месте.
+        </p>
+
+        <div class="cards">
+
+            <a href="live.html" class="card">
+                <div class="card-number">01</div>
+                <img src="live.jfif" style="max-width: 100%; margin-bottom: 15px;">
+                <h3>Прямые трансляции</h3>
+                <p>
+                    Следите за лучшими матчами в реальном времени.
+                </p>
+            </a>
+
+            <a href="good.html" class="card">
+                <div class="card-number">02</div>
+                <img src="player.jfif" style="max-width: 100%; margin-bottom: 15px;">
+                <h3>Лучшие Трансферы</h3>
+                <p>
+                    Следите за лучшими трансферами сезона.
+                </p>
+            </a>
+
+            <a href="news.html" class="card">
+                <div class="card-number">03</div>
+                <img src="news.jfif" style="max-width: 100%; margin-bottom: 15px;">
+                <h3>Футбольные новости</h3>
+                <p>
+                    Узнавайте последние новости из мира футбола.
+                </p>
+            </a>
+
+            <a href="record.html" class="card">
+                <div class="card-number">04</div>
+                <img src="record.jfif" style="max-width: 100%; margin-bottom: 15px;">
+                <h3>Футбольные рекорды</h3>
+                <p>
+                    Отслеживайте новые рекорды в мире футбола.
+                </p>
+            </a>
+             <a href="cm.html" class="card">
+                <div class="card-number">05</div>
+                <img src="liga.jfif" style="max-width: 100%; margin-bottom: 15px;">
+                <h3>Чемпионат мира</h3>
+                <p>
+                   Узнавайте последние новости о Чемпионате мира.
+                </p>
+            </a>
+             <a href="vin.html" class="card">
+                <div class="card-number">06</div>
+                <img src="prognoz.jfif" style="max-width: 100%; margin-bottom: 15px;">
+                <h3>Прогнозы на матчи</h3>
+                <p>
+                    Предлагайте свои варианты исходов футбольных игр.
+                </p>
+            </a>
+             <a href="data.html" class="card">
+                <div class="card-number">07</div>
+                <img src="data.jfif" style="max-width: 100%; margin-bottom: 15px;">
+                <h3>Расписание матчей</h3>
+                <p>
+                    Следите за лучшими матчами Лиги чемпионов.
+                </p>
+            </a> 
+             <a href="stars.html" class="card">
+                <div class="card-number">08</div>
+                <img src="stars.jfif" style="max-width: 100%; margin-bottom: 15px;">
+                <h3>Звезды каждой позиции</h3>
+                <p>
+                    Изучайте лучшие игроки в каждой позиции.
+                </p>
+            </a>
+        </div>
+        
+    </section>
+
+    <footer id="contacts">
+        <img src="tg.png" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 10px;" onclick="location.href='https://t.me/Tv1xz';">
+        <img src="ins.png" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 10px;" onclick="location.href='https://instagram.com/karybekov__009';">
+        <img src="apple.png" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 10px;" onclick="location.href='https://wa.me/+996773132293';">
+        ©️ 2027 World Football News. Все права защищены.
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design and Development Course</title>
+  <style>
+    
+    /* Верхнее меню */
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: orange;
+    }
+
+    /* Поиск */
+    .search-box {
+      margin-left: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box input {
+      padding: 8px 10px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+
+    .search-box button {
+      background: orange;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Заголовок и текст */
+    .content {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      max-width: 400px;
+    }
+
+    .content h1 {
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+    .content p {
+      font-size: 14px;
+      margin: 15px 0 25px;
+      color: #f0f0f0;
+    }
+
+   
+
+    /* Блок входа */
+    .login-box {
+      position: absolute;
+      top: 30%;
+      right: 10%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    .login-box h2 {
+      margin-top: 0;
+      background: white;
+      color: black;
+      text-align: center;
+      padding: 8px 0;
+      border-radius: 4px;
+    }
+
+    .login-box input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .login-box button {
+      width: 100%;
+      background: orange;
+      border: none;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-box p {
+      font-size: 12px;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .social a {
+      color: white;
+      margin: 0 5px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">О нас</a>
+      <a href="#">Сервисы</a>
+      <a href="#">Дизайн</a>
+      <a href="#">Контакты</a>
+    </nav>
+
+  
+
+
+
+  <div class="login-box">
+    <h2>Авторизация</h2>
+    </h2>
+    <input type="email" placeholder="Напишите свой email">
+    <input type="password" placeholder="Напишите свой пароль">
+    <button>Войти</button>
+    <p>У вас есть аккаунт? <a href="#" style="color:orange;">Зарегистироваться бесплатно</a></p>
+    <div class="social">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+  </div>
+
+</body>
+</html>

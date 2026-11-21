@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Расписание матчей | FOOTBALL</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #101820;
+            color: white;
+            padding: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #00e676;
+        }
+
+        header p {
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .date {
+            font-size: 23px;
+            margin-bottom: 20px;
+            color: #00e676;
+        }
+
+        .match {
+            background: #1c2935;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .match:hover {
+            transform: translateY(-4px);
+            background: #263746;
+        }
+
+        .teams {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .time {
+            color: #00e676;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .league {
+            color: #aaa;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #00e676;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .match {
+                padding: 16px;
+            }
+
+            .teams {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>FOOTBALL</h1>
+    <p>Расписание футбольных матчей 📅</p>
+</header>
+
+<div class="container">
+
+    <div class="date">
+        Матчи — 12 ноября 2026
+    </div>
+
+    <div class="match">
+        <div>
+            <div class="league">Лига наций</div>
+            <div class="teams">Турция — Бельгия</div>
+        </div>
+        <div class="time">23:00</div>
+    </div>
+
+    <div class="match">
+        <div>
+            <div class="league">Лига наций</div>
+            <div class="teams">Армения — Кипр</div>
+        </div>
+        <div class="time">23:00</div>
+    </div>
+
+    <div class="match">
+        <div>
+            <div class="league">Лига наций</div>
+            <div class="teams">Италия — Франция</div>
+        </div>
+        <div class="time">01:45 · 13 ноя</div>
+    </div>
+
+    <div class="match">
+        <div>
+            <div class="league">Лига наций</div>
+            <div class="teams">Англия — Хорватия</div>
+        </div>
+        <div class="time">01:45 · 13 ноя</div>
+    </div>
+
+    <div class="match">
+        <div>
+            <div class="league">Лига наций</div>
+            <div class="teams">Чехия — Испания</div>
+        </div>
+        <div class="time">01:45 · 13 ноя</div>
+    </div>
+
+    <div class="match">
+        <div>
+            <div class="league">Кубок Африки · Отбор</div>
+            <div class="teams">Гана — Сомали</div>
+        </div>
+        <div class="time">21:00 </div>
+    </div>
+
+    <div class="match">
+        <div>
+            <div class="league">Эль класико</div>
+            <div class="teams">Реал мадрид — Барселона</div>
+        </div>
+        <div class="time">01:00 · 13 ноя</div>
+    </div>
+
+    <a href="index.html" class="back">← На главную</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Футбольные новости</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #101010;
+            color: white;
+        }
+
+        header {
+            padding: 30px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #e5b567;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #e5b567;
+        }
+
+        .container {
+            width: 85%;
+            margin: 50px auto;
+        }
+
+        .title {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .title span {
+            color: #e5b567;
+        }
+
+        .subtitle {
+            color: #999;
+            margin-bottom: 35px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .news-card {
+            background: #1b1b1b;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-7px);
+            border-color: #e5b567;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .category {
+            color: #e5b567;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .news-content h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .news-content p {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 18px;
+            color: #e5b567;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 900px) {
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .title {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">FOOTBALL</div>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="live.html">Трансляции</a>
+        <a href="data.html">Расписание</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h1 class="title">Футбольные <span>новости</span></h1>
+
+    <p class="subtitle">
+        Последние события из мира большого футбола
+    </p>
+
+    <div class="news-grid">
+
+        <div class="news-card">
+            <img src="images/news1.jpg" alt="Футбол">
+            <div class="news-content">
+                <div class="category">МИРОВОЙ ФУТБОЛ</div>
+                <h2>Главные события футбольного мира</h2>
+                <p>Следите за важнейшими событиями, которые происходят в мировом футболе.</p>
+                <a href="#" class="read-more">Подробнее →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="images/news2.jpg" alt="Футбольный клуб">
+            <div class="news-content">
+                <div class="category">КЛУБЫ</div>
+                <h2>Новости европейских клубов</h2>
+                <p>Последние события из жизни ведущих футбольных команд Европы.</p>
+                <a href="#" class="read-more">Подробнее →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="images/news3.jpg" alt="Футболисты">
+            <div class="news-content">
+                <div class="category">ИГРОКИ</div>
+                <h2>Звёзды мирового футбола</h2>
+                <p>Новости, достижения и интересные события из карьеры футболистов.</p>
+                <a href="#" class="read-more">Подробнее →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="images/news4.jpg" alt="Стадион">
+            <div class="news-content">
+                <div class="category">ТУРНИРЫ</div>
+                <h2>Борьба за чемпионство</h2>
+                <p>Следите за ходом главных футбольных чемпионатов и турниров.</p>
+                <a href="#" class="read-more">Подробнее →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="images/news5.jpg" alt="Трансфер">
+            <div class="news-content">
+                <div class="category">ТРАНСФЕРЫ</div>
+                <h2>Последние трансферные новости</h2>
+                <p>Информация о переходах и переговорах между футбольными клубами.</p>
+                <a href="#" class="read-more">Подробнее →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="images/news6.jpg" alt="Трофей">
+            <div class="news-content">
+                <div class="category">ДОСТИЖЕНИЯ</div>
+                <h2>Новые футбольные рекорды</h2>
+                <p>Исторические достижения и рекорды лучших футболистов мира.</p>
+                <a href="#" class="read-more">Подробнее →</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 FOOTBALL | Все права защищены
+</footer>
+
+</body>
+</html>

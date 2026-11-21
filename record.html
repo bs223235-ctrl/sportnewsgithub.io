@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мировые футбольные рекорды</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: white;
+}
+
+header {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #080808;
+    border-bottom: 1px solid #b38b43;
+}
+
+.logo {
+    color: #e5b567;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #e5b567;
+}
+
+.hero {
+    padding: 65px 8%;
+    background: linear-gradient(100deg, #171717, #302414);
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #e5b567;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 17px;
+}
+
+.container {
+    width: 85%;
+    margin: 45px auto;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.section-title span {
+    color: #e5b567;
+}
+
+.records {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #1c1c1c;
+    border: 1px solid #514126;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #e5b567;
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.category {
+    color: #e5b567;
+    font-size: 13px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.card h2 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.number {
+    color: #e5b567;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    background: #080808;
+    color: #888;
+    border-top: 1px solid #514126;
+}
+
+@media(max-width: 900px) {
+    .records {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .records {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">FOOTBALL</div>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="live.html">Трансляции</a>
+        <a href="data.html">Расписание</a>
+        <a href="news.html">Новости</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>МИРОВЫЕ <span>РЕКОРДЫ</span></h1>
+    <p>Невероятные достижения и исторические моменты футбола</p>
+</section>
+
+<div class="container">
+
+    <h2 class="section-title">
+        Главные <span>рекорды футбола</span>
+    </h2>
+
+    <div class="records">
+
+        <div class="card">
+            <div class="icon">⚽</div>
+            <div class="category">Международный футбол</div>
+            <div class="number">146 голов</div>
+            <h2>Лучший бомбардир сборных</h2>
+            <p>Криштиану Роналду — рекордсмен по голам за мужские национальные сборные.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <div class="category">Золотой мяч</div>
+            <div class="number">8 наград</div>
+            <h2>Лионель Месси</h2>
+            <p>Рекордсмен по количеству наград «Золотой мяч».</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌍</div>
+            <div class="category">Чемпионат мира</div>
+            <div class="number">16 голов</div>
+            <h2>Мирослав Клозе</h2>
+            <p>Лучший бомбардир в истории мужских чемпионатов мира.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👑</div>
+            <div class="category">Чемпионат мира</div>
+            <div class="number">3 титула</div>
+            <h2>Пеле</h2>
+            <p>Трижды становился чемпионом мира в составе сборной Бразилии.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔥</div>
+            <div class="category">Календарный год</div>
+            <div class="number">91 гол</div>
+            <h2>Лионель Месси</h2>
+            <p>Забил 91 гол за календарный 2012 год в официальных матчах за клуб и сборную.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏟️</div>
+            <div class="category">Лига чемпионов</div>
+            <div class="number">15 титулов</div>
+            <h2>Реал Мадрид</h2>
+            <p>Самый титулованный клуб в истории Кубка европейских чемпионов и Лиги чемпионов.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎯</div>
+            <div class="category">Английская Премьер-лига</div>
+            <div class="number">36 голов</div>
+            <h2>Эрлинг Холанд</h2>
+            <p>Забил рекордные 36 голов за один сезон АПЛ из 38 туров.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧤</div>
+            <div class="category">Международные матчи</div>
+            <div class="number">234 матча</div>
+            <h2>Криштиану Роналду</h2>
+            <p>Рекордсмен по количеству матчей за мужские национальные сборные.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🥇</div>
+            <div class="category">Лига чемпионов</div>
+            <div class="number">183 матча</div>
+            <h2>Криштиану Роналду</h2>
+            <p>Рекордсмен по количеству сыгранных матчей в истории Лиги чемпионов.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 FOOTBALL | Все права защищены
+</footer>
+
+</body>
+</html>
